@@ -38,6 +38,7 @@ public class GlobalExceptionHandler {
     private ErrorResponse buildError(int status, String mensagem, String path, String error){
         return ErrorResponse.builder()
                 .timestamp(LocalDateTime.now())
+                .message(mensagem)
                 .error(error)
                 .status(status)
                 .path(path)
