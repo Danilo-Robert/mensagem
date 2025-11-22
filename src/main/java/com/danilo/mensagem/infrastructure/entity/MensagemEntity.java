@@ -13,13 +13,14 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "mensagem")
 @Builder
-public class Mensagem {
+public class MensagemEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String numeroTelefone;
     private String mensagem;
+    @Enumerated(EnumType.STRING)
     private StatusMensagemEnum statusMensagemEnum;
     private LocalDateTime enviadoEm;
 }
